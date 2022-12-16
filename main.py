@@ -1,25 +1,39 @@
 class Products:
-    products = []
+    _products = []
 
-    def create(self, id, title, short_description, description, slug, permalink, isAvailable, sku, price, regular_price,
-               manage_stock, stock_quantity, isVisible, date_created_gmt, date_modified_gmt):
-        product = id, title + short_description + description + slug + permalink + isAvailable + sku + price + regular_price + manage_stock + stock_quantity + isVisible + date_created_gmt + date_modified_gmt
-        return self.products.append(product)
+    def __init__(self, Id, title, short_description, description, slug, permalink, IsAvailable, sku, price,
+                 regular_price,
+                 manage_stock, stock_quantity, IsVisible, date_created_gmt, date_modified_gmt, _products):
+        self.Id = Id
+        self.title = title
+        self.short_description = short_description
+        self.description = description
+        self.slug = slug
+        self.permalink = permalink
+        self.IsAvailable = IsAvailable
+        self.sku = sku
+        self.price = price
+        self.regular_price = regular_price
+        self.manage_stock = manage_stock
+        self.stock_quantity = stock_quantity
+        self.IsVisible = IsVisible
+        self.date_created_gmt = date_created_gmt
+        self.date_modified_gmt = date_modified_gmt
 
-    def show_products(self):
-        products = [print(product) for product in self.products]
+    def create(self, products):
+        return self._products.append(products)
+
+    def read(self):
+        products = [print(product) for product in self._products]
         return products
 
-    def update_product(self, old_product, new_product):
-        for product in self.products:
+    def update(self, old_product, new_product):
+        for product in self._products:
             if product == old_product:
                 old_product = new_product
+                print('1')
             else:
                 print('Product is not in the list')
 
-
-p = Products()
-p.create(1, 't', 's', 'd', 's', 'p', 'i', 'sk', 'p', 'r', 'm', 'st', 'isv', 'dc', 'dm')
-p.show_products()
-p.update_product((1, 'tsdspiskprmstisvdcdm'), (2, 'wsdspiskprmstisvdcdm'))
-p.show_products()
+    def delete(self, product):
+        print('List is empty') if self._products == [] else self._products.remove(product)
