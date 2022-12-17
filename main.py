@@ -1,22 +1,22 @@
 class Products:
     _products = []
 
-    def __init__(self, id, title, short_description, description, slug, permalink, isavailable, sku, price,
+    def __init__(self, id, title, short_description, description, slug, permalink, is_available, sku, price,
                  regular_price,
-                 manage_stock, stock_quantity, isvisible, date_created_gmt, date_modified_gmt, _products):
+                 manage_stock, stock_quantity, is_visible, date_created_gmt, date_modified_gmt, _products):
         self.id = id
         self.title = title
         self.short_description = short_description
         self.description = description
         self.slug = slug
         self.permalink = permalink
-        self.isavailable = isavailable
+        self.is_available = is_available
         self.sku = sku
         self.price = price
         self.regular_price = regular_price
         self.manage_stock = manage_stock
         self.stock_quantity = stock_quantity
-        self.isvisible = isvisible
+        self.is_visible = is_visible
         self.date_created_gmt = date_created_gmt
         self.date_modified_gmt = date_modified_gmt
 
