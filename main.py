@@ -3,7 +3,7 @@ class Products:
 
     def __init__(self, id, title, short_description, description, slug, permalink, is_available, sku, price,
                  regular_price,
-                 manage_stock, stock_quantity, is_visible, date_created_gmt, date_modified_gmt, _products):
+                 manage_stock, stock_quantity, is_visible, date_created_gmt, date_modified_gmt):
         self.id = id
         self.title = title
         self.short_description = short_description
