@@ -38,5 +38,3 @@ class Products:
     def delete_product(self, product):
         print('List is empty') if self._products == [] else self._products.remove(product)
 
-
-
