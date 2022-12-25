@@ -20,8 +20,8 @@ class Products:
         self.date_created_gmt = date_created_gmt
         self.date_modified_gmt = date_modified_gmt
 
-    def create_product(self, products):
-        self._products.append(products)
+    def create_product(self):
+        self._products.append(self)
 
     def read_product(self):
         products = [print(product) for product in self._products]
