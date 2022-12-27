@@ -33,6 +33,13 @@ class Products:
         products = [print(product) for product in self._products]
         return products
 
+    def list_all(self):
+        if self._products == []:
+            print('List is Empty')
+        else:
+            products = [print(product) for product in self._products]
+            return products
+
     def update_product(self, old_product, new_product):
         for product in self._products:
             if product == old_product:

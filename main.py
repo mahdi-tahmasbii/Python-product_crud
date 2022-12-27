@@ -18,7 +18,9 @@ def main():
     p1.update_product(p1, p2)
     p1.delete_product(p1)
     print(f'Product ({p1.title}) is Deleted')
-    p1.read_product()
+    p1.list_all()
+
+    print(isinstance(p1, Products))
 
 
 if __name__ == "__main__":
