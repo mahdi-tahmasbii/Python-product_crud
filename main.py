@@ -12,8 +12,14 @@ def main():
                   75, 5, 5, True,
                   '2021/2/4',
                   '2021/2/4')
+    p3 = Products(3, 'lenovo think pad', 'gaming laptop', 'gaming model', 'lenovo-idea-pad-3', 'asda', True, '42', 420,
+                  56,
+                  75, 5, 5, True,
+                  '2021/2/4',
+                  '2021/2/4')
 
     p1.create_product()
+    p3.create_product()
     p1.read_product()
     p1.update_product(p1, p2)
     p1.delete_product(p1)
